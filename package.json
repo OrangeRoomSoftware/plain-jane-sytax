@@ -1,0 +1,21 @@
+{
+  "name": "plain-jane-syntax",
+  "theme": "syntax",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Just a simple and plain syntax theme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orangeroomsoftware/plain-jane-atom-theme"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "readme": "# The Plain Jane Atom Syntax Theme\n\n![A screenshot!](https://github.com/orangeroomsoftware/plain-jane-atom-theme/screenshot.png)\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/orangeroomsoftware/plain-jane-atom-theme/issues"
+  },
+  "homepage": "https://github.com/orangeroomsoftware/plain-jane-atom-theme"
+}
