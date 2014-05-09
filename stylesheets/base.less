@@ -51,7 +51,6 @@
     color: @syntax-cursor-color;
   }
 
-  // Selections!
   .selection .region {
     color: @syntax-selection-color;
     background-color: @syntax-selection-background;
@@ -68,6 +67,7 @@
   border: 1px solid @syntax-result-marker-color-selected;
 }
 
+// Comments
 .comment {
   color: rgb(93, 103, 108);
 }
@@ -83,18 +83,18 @@
 }
 
 .keyword {
-  color: @yellow;
+  color: @blue;
 
   &.control {
-    color: @syntax-text-color;
+    color: @blue;
   }
 
   &.operator {
-    color: @syntax-text-color;
-  }
-
-  &.other.special-method {
     color: @blue;
+
+    &.assignment {
+      color: @syntax-text-color;
+    }
   }
 
   &.other.unit {
@@ -147,7 +147,7 @@
 
 
   &.regexp {
-    color: @blue;
+    color: @red;
 
     .source.ruby.embedded {
       color: @syntax-text-color;
@@ -159,57 +159,23 @@
   }
 }
 
-.punctuation {
-  &.definition {
-    &.comment {
-      color: @syntax-text-color;
-    }
-
-    &.string,
-    &.variable,
-    &.parameters,
-    &.array {
-      color: @syntax-text-color;
-    }
-
-    &.heading,
-    &.identity {
-      color: @syntax-text-color;
-    }
-
-    &.bold {
-      color: @syntax-text-color;
-      font-style: bold;
-    }
-
-    &.italic {
-      color: @syntax-text-color;
-      font-style: italic;
-    }
-  }
-
-  &.section.embedded {
-    color: darken(@syntax-text-color, 10%);
-  }
-}
-
 .support {
   &.class {
     color: @syntax-text-color;
   }
 
   &.function  {
-    color: @blue;
+    color: @syntax-text-color;
 
     &.any-method {
-      color: @blue;
+      color: @syntax-text-color;
     }
   }
 }
 
 .entity {
   &.name.function {
-    color: @blue;
+    color: @syntax-text-color;
   }
 
   &.name.class, &.name.type.class {
@@ -255,6 +221,10 @@
     background-color: #373b41;
     color: @syntax-text-color;
   }
+}
+
+.scope.begin, .scope.end, .start-block, .end-block {
+  color: @green;
 }
 
 .none {
