@@ -40,19 +40,22 @@
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
-    color: @light-gray;
+    color: @syntax-text-color;
   }
 
   .invisible {
-    color: @syntax-text-color;
+    color: @dark-gray;
   }
 
   .cursor {
     color: @syntax-cursor-color;
   }
 
+  // Selections!
   .selection .region {
-    background-color: @syntax-selection-color;
+    color: @syntax-selection-color;
+    background-color: @syntax-selection-background;
+    border: solid 1px lighten(@syntax-selection-background, 5%);
   }
 }
 
@@ -66,25 +69,24 @@
 }
 
 .comment {
-  color: @light-gray;
+  color: rgb(93, 103, 108);
 }
 
 .entity {
   &.name.type {
-    color: @light-orange;
-    text-decoration: underline;
+    color: @syntax-text-color;
   }
 
   &.other.inherited-class {
-    color: @green;
+    color: @syntax-text-color;
   }
 }
 
 .keyword {
-  color: @purple;
+  color: @yellow;
 
   &.control {
-    color: @purple;
+    color: @syntax-text-color;
   }
 
   &.operator {
@@ -96,39 +98,39 @@
   }
 
   &.other.unit {
-    color: @orange;
+    color: @syntax-text-color;
   }
 }
 
 .storage {
-  color: @purple;
+  color: @syntax-text-color;
 }
 
 .constant {
-  color: @orange;
+  color: @syntax-text-color;
 
   &.character.escape {
-    color: @cyan;
+    color: @syntax-text-color;
   }
 
   &.numeric {
-    color: @orange;
+    color: @syntax-text-color;
   }
 
   &.other.color {
-    color: @cyan;
+    color: @syntax-text-color;
   }
 
   &.other.symbol {
-    color: @green;
+    color: @syntax-text-color;
   }
 }
 
 .variable {
-  color: @red;
+  color: @syntax-text-color;
 
   &.interpolation {
-    color: darken(@red, 10%);
+    color: darken(@syntax-text-color, 10%);
   }
 
   &.parameter.function {
@@ -137,31 +139,30 @@
 }
 
 .invalid.illegal {
-  background-color: @red;
-  color: @syntax-background-color;
+  color: @dark-red;
 }
 
 .string {
-  color: @green;
+  color: white;
 
 
   &.regexp {
-    color: @cyan;
+    color: @blue;
 
     .source.ruby.embedded {
-      color: @orange;
+      color: @syntax-text-color;
     }
   }
 
   &.other.link {
-    color: @red;
+    color: @syntax-text-color;
   }
 }
 
 .punctuation {
   &.definition {
     &.comment {
-      color: @light-gray;
+      color: @syntax-text-color;
     }
 
     &.string,
@@ -173,33 +174,32 @@
 
     &.heading,
     &.identity {
-      color: @blue;
+      color: @syntax-text-color;
     }
 
     &.bold {
-      color: @light-orange;
+      color: @syntax-text-color;
       font-style: bold;
     }
 
     &.italic {
-      color: @purple;
+      color: @syntax-text-color;
       font-style: italic;
     }
   }
 
   &.section.embedded {
-    color: darken(@red, 10%);
+    color: darken(@syntax-text-color, 10%);
   }
-
 }
 
 .support {
   &.class {
-    color: @light-orange;
+    color: @syntax-text-color;
   }
 
   &.function  {
-    color: @cyan;
+    color: @blue;
 
     &.any-method {
       color: @blue;
@@ -213,42 +213,42 @@
   }
 
   &.name.class, &.name.type.class {
-    color: @light-orange;
+    color: @syntax-text-color;
   }
 
   &.name.section {
-    color: @blue;
+    color: @syntax-text-color;
   }
 
   &.name.tag {
-    color: @red;
+    color: @syntax-text-color;
     text-decoration: underline;
   }
 
   &.other.attribute-name {
-    color: @orange;
+    color: @syntax-text-color;
 
     &.id {
-      color: @blue;
+      color: @syntax-text-color;
     }
   }
 }
 
 .meta {
   &.class {
-    color: @light-orange;
+    color: @syntax-text-color;
   }
 
   &.link {
-    color: @orange;
+    color: @syntax-text-color;
   }
 
   &.require {
-    color: @blue;
+    color: @syntax-text-color;
   }
 
   &.selector {
-    color: @purple;
+    color: @syntax-text-color;
   }
 
   &.separator {
@@ -263,48 +263,48 @@
 
 .markup {
   &.bold {
-    color: @orange;
+    color: @syntax-text-color;
     font-style: bold;
   }
 
   &.changed {
-    color: @purple;
+    color: @syntax-text-color;
   }
 
   &.deleted {
-    color: @red;
+    color: @syntax-text-color;
   }
 
   &.italic {
-    color: @purple;
+    color: @syntax-text-color;
     font-style: italic;
   }
 
   &.heading .punctuation.definition.heading {
-    color: @blue;
+    color: @syntax-text-color;
   }
 
   &.inserted {
-    color: @green;
+    color: @syntax-text-color;
   }
 
   &.list {
-    color: @red;
+    color: @syntax-text-color;
   }
 
   &.quote {
-    color: @orange;
+    color: @syntax-text-color;
   }
 
   &.raw.inline {
-    color: @green;
+    color: @syntax-text-color;
   }
 }
 
 .source.gfm .markup {
   -webkit-font-smoothing: auto;
   &.heading {
-    color: @green;
+    color: @syntax-text-color;
   }
 }
 
